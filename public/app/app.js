@@ -1,0 +1,1 @@
+var app = angular.module('quanlyluanvan', ["datatables"],).constant('mainURL', 'http://localhost/quanlyluanvan/public/index.php/');
