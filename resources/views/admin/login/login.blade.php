@@ -40,7 +40,7 @@
 				@endif
 				
 			<form role="form" method="POST" action="{{ url('/login') }}">
-				@csrf
+				{{ csrf_field() }}
 				<div class="form-group">
 					<div class="form-label-group">
 						<input type="text" id="username" class="form-control" name="username" required="required" autofocus="autofocus">
