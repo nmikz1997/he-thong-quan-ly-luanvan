@@ -39,7 +39,7 @@ class CanboController extends Controller
 
         $user->username = $request->id;
         $user->password = bcrypt($request->password);
-        $request->chucvu == 'TK' ? $user->level = 2 : $user->level = '1';
+        $request->chucvu == 'TK' ? $user->level = 2 : $user->level = 1;
 
         $canbo->save();
         $user->save();

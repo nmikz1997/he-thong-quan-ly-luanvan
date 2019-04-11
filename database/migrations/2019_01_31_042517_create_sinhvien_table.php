@@ -14,7 +14,7 @@ class CreateSinhvienTable extends Migration
     public function up()
     {
         Schema::create('sinhvien', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->char('id',8);
             $table->string('ten');
             $table->boolean('gioitinh');

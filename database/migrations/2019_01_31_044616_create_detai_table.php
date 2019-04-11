@@ -14,7 +14,7 @@ class CreateDetaiTable extends Migration
     public function up()
     {
         Schema::create('detai', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('ten',100);
             $table->char('canbo_id',10)->index();

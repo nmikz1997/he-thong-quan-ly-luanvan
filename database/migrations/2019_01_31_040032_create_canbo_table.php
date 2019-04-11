@@ -14,7 +14,7 @@ class CreateCanboTable extends Migration
     public function up()
     {
         Schema::create('canbo', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->char('id',10);
             $table->string('ten',100);
             $table->char('chucdanh',10);

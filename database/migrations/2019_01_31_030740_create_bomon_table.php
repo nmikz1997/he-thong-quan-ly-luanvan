@@ -14,7 +14,7 @@ class CreateBomonTable extends Migration
     public function up()
     {
         Schema::create('bomon', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->string('id',10);
             $table->string('ten',100);
             $table->primary('id');

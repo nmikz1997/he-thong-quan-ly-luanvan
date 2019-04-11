@@ -14,7 +14,7 @@ class CreateNgaybaoveTable extends Migration
     public function up()
     {
         Schema::create('ngay', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->date('ngay');
             $table->unsignedInteger('nienkhoa_id');
             

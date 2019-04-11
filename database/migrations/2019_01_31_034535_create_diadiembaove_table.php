@@ -14,10 +14,9 @@ class CreateDiadiembaoveTable extends Migration
     public function up()
     {
         Schema::create('diadiem', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->char('id',10);
             $table->string('ten',50);
-            $table->boolean('tinhtrang');
             $table->primary('id');
         });
     }

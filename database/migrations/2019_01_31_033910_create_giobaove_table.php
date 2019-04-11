@@ -14,7 +14,7 @@ class CreateGiobaoveTable extends Migration
     public function up()
     {
         Schema::create('gio', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->unsignedTinyInteger('id')->autoIncrement();
             $table->time('giobatdau')->unique()->comment('Giờ bắt dầu báo cáo luận văn');
         });

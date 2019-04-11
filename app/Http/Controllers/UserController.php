@@ -28,14 +28,14 @@ class UserController extends Controller
         }
         else
         {
-            return redirect('login')->with('message', "Đăng nhập thất bại");
+            return redirect('/')->with('message', "Đăng nhập thất bại");
         }
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('login');
+        return redirect('/');
     }
 
 }

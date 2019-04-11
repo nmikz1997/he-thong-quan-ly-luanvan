@@ -14,7 +14,7 @@ class CreateDetaidangkyTable extends Migration
     public function up()
     {
         Schema::create('detaidangky', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->char('sinhvien_id',8);
             $table->unsignedInteger('detai_id');

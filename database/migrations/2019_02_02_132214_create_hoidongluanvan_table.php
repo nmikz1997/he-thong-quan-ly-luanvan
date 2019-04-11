@@ -14,6 +14,7 @@ class CreateHoidongluanvanTable extends Migration
     public function up()
     {
         Schema::create('hoidongluanvan', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             //$table->increments('id');
             $table->char('canbo_id',10);
             $table->char('luanvan_id',8);

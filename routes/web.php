@@ -4,7 +4,7 @@
 // 	return view ('welcome');
 // });
 
-Route::get('login', 'UserController@login');
+Route::get('/', 'UserController@login');
 Route::post('login', 'UserController@check');
 Route::get('logout', 'UserController@logout');
 

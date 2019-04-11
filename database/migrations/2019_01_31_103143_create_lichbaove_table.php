@@ -14,14 +14,14 @@ class CreateLichbaoveTable extends Migration
     public function up()
     {
         Schema::create('lichbaove', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
-            //$table->increments('id');
+            $table->engine = 'InnoDB';
+            $table->increments('id');
             $table->unsignedTinyInteger('gio_id');
             $table->date('ngay_id');
             $table->char('diadiem_id',10);
             //$table->char('luanvan_id',8)->nullable();
             
-            $table->primary(['gio_id','ngay_id','diadiem_id']);
+            $table->unique(['gio_id','ngay_id','diadiem_id']);
 
             $table->foreign('gio_id')->references('id')->on('gio')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('ngay_id')->references('ngay')->on('ngay')->onDelete('cascade')->onUpdate('cascade');

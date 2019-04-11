@@ -14,7 +14,7 @@ class CreateNienkhoaTable extends Migration
     public function up()
     {
         Schema::create('nienkhoa', function (Blueprint $table) {
-            //$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->unsignedSmallInteger('nambatdau');
             $table->enum('hocki',['1','2']);
