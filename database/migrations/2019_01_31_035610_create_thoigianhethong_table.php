@@ -14,7 +14,7 @@ class CreateThoigianhethongTable extends Migration
     public function up()
     {
         Schema::create('thoigianhethong', function (Blueprint $table) {
-            //$table->char('id',10);
+            $table->char('id',10);
             $table->string('ten');
             $table->date('thoigianmo');
             $table->date('thoigiandong');
