@@ -1,3 +1,9 @@
+@if(Auth::check())
+<script>
+	window.location="https://quan-li-luan-van.herokuapp.com/dsdetai";
+</script>
+@endif
+
 <!DOCTYPE html>
 <html lang="en">
 

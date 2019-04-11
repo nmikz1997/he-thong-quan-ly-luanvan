@@ -1,1 +1,1 @@
-var app = angular.module('quanlyluanvan', ["datatables"],).constant('mainURL', 'http://localhost/quanlyluanvan/public/index.php/');
+var app = angular.module('quanlyluanvan', ["datatables"],).constant('mainURL', 'https://quan-li-luan-van.herokuapp.com/');
