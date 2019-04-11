@@ -1,16 +1,17 @@
 app.controller('CanBoController', function($scope, $http, mainURL){
-	$http.get(mainURL + 'bomon').then(function (response) {
+	$http.get(mainURL + 'bomon')
+	.then(function (response) {
 		$scope.arrBoMon 	= angular.fromJson(response.data.message.jsonBoMon);
-	});
-	
-
-	$scope.tuychon = function (id) {
+	})
+	.then(function () {
+		$scope.tuychon = function (id) {
 		$scope.bomon = id;
 		$http.get(mainURL + 'canbo/bomon/'+id).then(function (response) {
 			$scope.dataTitle 	= $scope.arrBoMon.find(bomon => bomon.id === $scope.bomon).ten;
 			$scope.arrCanBo 	= angular.fromJson(response.data.message.jsonCanBo);
 		});	
-	}
+		}
+	});
 
 	$scope.tuychon('CNTT');
 

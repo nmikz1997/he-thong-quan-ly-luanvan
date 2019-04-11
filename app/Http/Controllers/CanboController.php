@@ -50,7 +50,7 @@ class CanboController extends Controller
 
     public function show($id)
     {
-        return Canbo::findOrFail($id);
+        return Canbo::find($id);
     }
 
 
